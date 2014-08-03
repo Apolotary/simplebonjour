@@ -1,6 +1,6 @@
 **Notes:**
 
-This is the same simplebonjour object, but with an updated makefile which is supposed to work for 64bit architectures. The template was taken here. Alternatively you can still build it with an old file, but it definitely doesn't work on 64-bit version of OS X.
+This is the same simplebonjour object, but with an updated makefile which is supposed to work for 64bit architectures. The template was taken [here](http://puredata.info/docs/developer/MakefileTemplate). Alternatively you can still build it with an old file, but it definitely doesn't work on 64-bit version of OS X.
 
 Also a few lines in source code were causing compile errors, so I commented them out.
 
