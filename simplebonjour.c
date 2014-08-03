@@ -353,7 +353,7 @@ static void simplebonjour_browse(t_simplebonjour *x, t_symbol *s, int argc, t_at
 
     x->err = DNSServiceBrowse(&client, 0, opinterface, x->servicetype, 0, browse_reply, NULL);
 
-    if (!client || x->err != kDNSServiceErr_NoError) { fprintf(stderr, "DNSService call failed %ld\n", (long int)x->err); post("DNSService call failed."); return (-1); }
+    if (!client || x->err != kDNSServiceErr_NoError) { fprintf(stderr, "DNSService call failed %ld\n", (long int)x->err); post("DNSService call failed."); /*return (-1);*/ }
     HandleBrowseEvents(x);
 
     if (client   ) DNSServiceRefDeallocate(client   );
@@ -383,7 +383,7 @@ static void simplebonjour_resolve(t_simplebonjour *x, t_symbol *s, int argc, t_a
         strcpy(resolvedomain, "local");
 
     x->err = DNSServiceResolve(&client, 0, opinterface, resolvetarget, x->servicetype, resolvedomain, resolve_reply, NULL);
-    if (!client || x->err != kDNSServiceErr_NoError) { fprintf(stderr, "DNSService call failed %ld\n", (long int)x->err); post("DNSService call failed."); return (-1); }
+    if (!client || x->err != kDNSServiceErr_NoError) { fprintf(stderr, "DNSService call failed %ld\n", (long int)x->err); post("DNSService call failed."); /*return (-1);*/ }
 
     HandleResolveEvents(x);
 
