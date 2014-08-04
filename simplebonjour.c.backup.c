@@ -157,7 +157,8 @@ typedef struct _simplebonjour
   DNSServiceErrorType err;
   char servicetype[80];
   t_outlet *a_out, *b_out;
-}t_simplebonjour;
+}
+t_simplebonjour;
 
 void *simplebonjour_new(void)
 {
